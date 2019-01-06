@@ -1269,6 +1269,7 @@ footer .pseudo {
     background-image: url('../img/icon-menu.svg');
     background-size: 100%;
     margin-top: -20px;
+    margin-left: 6%;
   }
   .menu {
     visibility: hidden;
@@ -1434,7 +1435,6 @@ footer .pseudo {
     height: 45vh;
   }
 }
-
 @media all and (max-height: 1000px) {
   .video {
     height: 55vh;
@@ -1447,33 +1447,35 @@ footer .pseudo {
 }
 @media all and (max-height: 650px) {
   .hidden {
-    top: 8%;
+    top: 10%;
   }
   .video {
-    height: 70vh;
+    height: 75vh;
   }
 }
-@media all and(max-height: 572px) {
+@media all and (max-height: 572px) {
   .video {
     height: 90vh;
   }
 }
-
 @media all and (max-height: 425px) {
   .hidden {
-    top: 15%;
-    span {
-      margin-top: 5px;
-    }
-    p {
-      line-height: 23px;
-      margin: 5px;
-    }
+    top: 7%;
+  }
+  .hidden span {
+    margin-top: 5px;
+  }
+  .hidden p {
+    line-height: 23px;
+    margin: 5px;
   }
 }
 @media all and (max-height: 388px) {
   .hidden {
-    top: 8%;
+    top: 1%;
+  }
+  .hidden span {
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */
