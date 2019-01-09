@@ -256,20 +256,12 @@ input[type="checkbox"]:checked ~ .menu {
   position: absolute;
   top: 95%;
   outline: none;
-}
-.control .control-radio:after {
-  content: "";
   display: inline-block;
   width: 15px;
   height: 15px;
   background-color: #a4a3a1;
   background-clip: padding-box;
   border: 2px solid rgba(0, 0, 0, 0);
-  border-radius: 50%;
-}
-.control .control-radio:focus:after {
-  background-color: rgba(0, 0, 0, 0);
-  border: 2px solid #a4a3a1;
   border-radius: 50%;
 }
 .control .control-radio:nth-child(2) {
