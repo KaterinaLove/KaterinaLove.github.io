@@ -1,3 +1,14 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex: 1 0 auto;
+}
 @font-face {
   font-family: 'montserrat-regular';
   font-style: normal;
@@ -1071,6 +1082,7 @@ video {
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 }
 footer {
+  flex: 0 0 auto;
   background-color: #111111;
   display: flex;
   justify-content: space-around;
@@ -1344,7 +1356,8 @@ footer .pseudo {
     flex-direction: column;
   }
   .menu li {
-    height: 37px;
+    transition: height 2s ease;
+    height: 0px;
     background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
     font-family: 'montserrat-regular', sans-serif;
     font-size: 14px;
@@ -1359,6 +1372,9 @@ footer .pseudo {
   }
   .menu li:active {
     color: #a48d72;
+  }
+  input[type="checkbox"]:checked ~ .menu li {
+    height: 37px;
   }
   header {
     padding-bottom: 80px;
