@@ -111,11 +111,11 @@ control2.onclick = function() {slid2();}
 control3.onclick = function() {slid3();}
 control4.onclick = function() {slid4();}
 control5.onclick = function() {slid5();}
-//Слайдер запускаеться после загрузки всей страницы
-document.addEventListener("DOMContentLoaded", timerId);
 //слайдер 6секунд
 function timerId() {
   setInterval(function (){
     slideRight();
   }, 6000);
 }
+//Слайдер запускаеться после загрузки всей страницы
+window.onload = function() {timerId()};
