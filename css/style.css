@@ -265,7 +265,7 @@ input[type="checkbox"]:checked ~ .menu {
   border-bottom: 2px solid #d3c1ad;
   border-left: 2px solid #d3c1ad;
 }
-.control .control-radio {
+.control-radio {
   position: absolute;
   top: 95%;
   outline: none;
@@ -277,19 +277,19 @@ input[type="checkbox"]:checked ~ .menu {
   border: 2px solid rgba(0, 0, 0, 0);
   border-radius: 50%;
 }
-.control .control-radio:nth-child(2) {
+.control-radio:nth-child(2) {
   left: 46%;
 }
-.control .control-radio:nth-child(3) {
+.control-radio:nth-child(3) {
   left: 48%;
 }
-.control .control-radio:nth-child(4) {
+.control-radio:nth-child(4) {
   left: 50%;
 }
-.control .control-radio:nth-child(5) {
+.control-radio:nth-child(5) {
   left: 52%;
 }
-.control .control-radio:nth-child(6) {
+.control-radio:nth-child(6) {
   left: 54%;
 }
 .control .control-right {
@@ -376,6 +376,20 @@ input[type="checkbox"]:checked ~ .menu {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0;
+}
+.active {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #a4a3a1;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+}
+.pasive {
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  background-color: #a4a3a1;
 }
 .features {
   display: flex;

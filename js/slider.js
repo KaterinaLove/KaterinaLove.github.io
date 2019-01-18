@@ -8,20 +8,12 @@ var slide1 = document.getElementById("s1"),
 //кружочек пасивнай
 function pasiv(name) {
   let control = document.getElementById(name);
-  control.style.borderWidth = "2px";
-  control.style.borderStyle = "solid";
-  control.style.borderColor = "rgba(0, 0, 0, 0)";
-  control.style.borderRadius = "50%";
-  control.style.backgroundColor = "#a4a3a1";
+  control.className = "control-radio pasive";
 }
 //кружочек активный
 function activ(name) {
   let control = document.getElementById(name);
-  control.style.borderWidth = "2px";
-  control.style.borderStyle = "solid";
-  control.style.borderColor = "#a4a3a1";
-  control.style.borderRadius = "50%";
-  control.style.backgroundColor = "rgba(0, 0, 0, 0)";
+  control.className = "control-radio active";
 }
 //выбор слайда
 // Можно поменять на прозрачность и сделать плавные переходы
