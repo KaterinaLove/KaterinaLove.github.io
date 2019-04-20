@@ -317,6 +317,9 @@ footer .footer-contacts {
   display: block;
   margin: 0 0 30px;
 }
+footer .phone {
+  font-family: 'roboto-regular', sans-serif;
+}
 .footer-vk {
   width: 300px;
   text-decoration: none;
