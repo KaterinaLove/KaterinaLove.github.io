@@ -1,113 +1,79 @@
-var slide1 = document.getElementById("s1"),
-  slide2 = document.getElementById("s2"),
-  slide3 = document.getElementById("s3"),
-  slide4 = document.getElementById("s4"),
-  slide5 = document.getElementById("s5"),
-  controlLeft = document.getElementById("controlLeft"),
-  controlRight = document.getElementById("controlRight");
-//кружочек пасивнай
-function pasiv(name) {
-  let control = document.getElementById(name);
-  control.className = "control-radio pasive";
+const services = [
+  '<div class="services-item"><img width="250" src="img/wedding.jpg" alt="Организация свадеб" class="services-item-img"><span class="services-item-span">Cвадьба</span></div>',
+  '<div class="services-item"><img width="250" src="img/corporate.jpg" alt="Корпоративный праздник" class="services-item-img"><span class="services-item-span">Корпоративный праздник</span></div>',
+  '<div class="services-item"><img width="250" src="img/outlet.jpg" alt="Выпускной" class="services-item-img"><span class="services-item-span">Выпускной</span></div>',
+  '<div class="services-item"><img width="250" src="img/birthdays.jpg" alt="Дни рождения" class="services-item-img"><span class="services-item-span">Дни рождения</span></div>',
+  '<div class="services-item"><img width="250" src="img/cityevents.jpg" alt="Городские мероприятия" class="services-item-img"><span class="services-item-span">Городские мероприятия</span></div>',
+  '<div class="services-item"><img width="250" src="img/intheopenair.jpg" alt="На свежем воздухе" class="services-item-img"><span class="services-item-span">На свежем воздухе</span></div>'
+];
+const activity = [
+  '<articl class="activity-item"><img src="img/freshair.jpg" alt="мероприятие на свежем ваздухе" width="300" class="activity-img"><time class="activity-time" pubdate="" datetime="2019-04-01"><span class="activity-day">1</span><span class="activity-month">апр</span><span class="activity-year">2019</span></time><span class="activity-h">Роупджампинг</span><p class="activity-p">Мега крутое описание. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe iusto dicta optio ipsa nobis quibusdam officiis delectus ad quos, autem dignissimos, ipsam libero at illo sint id ratione recusandae. Pariatur.</p><a href="https://m.vk.com/wall-152669026_266" class="activity-a">Read More...</a></articl>',
+  '<articl class="activity-item"><img src="img/freshair.jpg" alt="мероприятие на свежем ваздухе" width="300" class="activity-img"><time class="activity-time" pubdate="" datetime="2019-05-01"><span class="activity-day">1</span><span class="activity-month">апр</span><span class="activity-year">2019</span></time><span class="activity-h">Мероприятие на свежем ваздухе</span><p class="activity-p">Мега крутое описание. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe iusto dicta optio ipsa nobis quibusdam officiis delectus ad quos, autem dignissimos, ipsam libero at illo sint id ratione recusandae. Pariatur.</p><a href="https://m.vk.com/wall-152669026_266" class="activity-a">Read More...</a></articl>',
+  '<articl class="activity-item"><img src="img/freshair.jpg" alt="мероприятие на свежем ваздухе" width="300" class="activity-img"><time class="activity-time" pubdate="" datetime="2019-04-11"><span class="activity-day">1</span><span class="activity-month">апр</span><span class="activity-year">2019</span></time><span class="activity-h">8 Марта</span><p class="activity-p">Мега крутое описание. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe iusto dicta optio ipsa nobis quibusdam officiis delectus ad quos, autem dignissimos, ipsam libero at illo sint id ratione recusandae. Pariatur.</p><a href="https://m.vk.com/wall-152669026_266" class="activity-a">Read More...</a></articl>',
+  '<articl class="activity-item"><img src="img/freshair.jpg" alt="мероприятие на свежем ваздухе" width="300" class="activity-img"><time class="activity-time" pubdate="" datetime="2019-04-18"><span class="activity-day">1</span><span class="activity-month">апр</span><span class="activity-year">2019</span></time><span class="activity-h">Международный день счастья</span><p class="activity-p">Мега крутое описание. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe iusto dicta optio ipsa nobis quibusdam officiis delectus ad quos, autem dignissimos, ipsam libero at illo sint id ratione recusandae. Pariatur.</p><a href="https://m.vk.com/wall-152669026_266" class="activity-a">Read More...</a></articl>',
+  '<articl class="activity-item"><img src="img/freshair.jpg" alt="мероприятие на свежем ваздухе" width="300" class="activity-img"><time class="activity-time" pubdate="" datetime="2019-04-28"><span class="activity-day">1</span><span class="activity-month">апр</span><span class="activity-year">2019</span></time><span class="activity-h">Ведущий - как пионер</span><p class="activity-p">Мега крутое описание. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe iusto dicta optio ipsa nobis quibusdam officiis delectus ad quos, autem dignissimos, ipsam libero at illo sint id ratione recusandae. Pariatur.</p><a href="https://m.vk.com/wall-152669026_266" class="activity-a">Read More...</a></articl>',
+  '<articl class="activity-item"><img src="img/freshair.jpg" alt="мероприятие на свежем ваздухе" width="300" class="activity-img"><time class="activity-time" pubdate="" datetime="2019-03-21"><span class="activity-day">1</span><span class="activity-month">апр</span><span class="activity-year">2019</span></time><span class="activity-h">Андрей и Анна Тарасенко</span><p class="activity-p">Мега крутое описание. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe iusto dicta optio ipsa nobis quibusdam officiis delectus ad quos, autem dignissimos, ipsam libero at illo sint id ratione recusandae. Pariatur.</p><a href="https://m.vk.com/wall-152669026_266" class="activity-a">Read More...</a></articl>'
+]
+var i = 0; //счетчик для services
+var j = 0; //счетчик для activity
+//проверка
+function check() {
+  if (i == services.length) {
+    i = 0;
+  }
+  if (i == -1) {
+    i = services.length - 1;
+  }
 }
-//кружочек активный
-function activ(name) {
-  let control = document.getElementById(name);
-  control.className = "control-radio active";
+//слайдер
+var timerId = setInterval(function () {
+  check();
+  i++;
+  check();
+  document.getElementById('services').innerHTML = services[i];
+}, 4000);
+document.getElementById('servicesLeft').onclick = function () {
+  check();
+  i--;
+  check();
+  document.getElementById('services').innerHTML = services[i];
 }
-//выбор слайда
-// Можно поменять на прозрачность и сделать плавные переходы
-function control(s1, s2, s3, s4, s5) {
-  slide1.style.opacity = s1;
-  slide2.style.opacity = s2;
-  slide3.style.opacity = s3;
-  slide4.style.opacity = s4;
-  slide5.style.opacity = s5;
+document.getElementById('servicesRight').onclick = function () {
+  check();
+  i++;
+  check();
+  document.getElementById('services').innerHTML = services[i];
 }
 
-function slid1() {
-  control("1","0","0","0","0");
-  activ("control1");
-  pasiv("control2");
-  pasiv("control3");
-  pasiv("control4");
-  pasiv("control5");
-}
-function slid2() {
-  control("0","1","0","0","0");
-  activ("control2");
-  pasiv("control1");
-  pasiv("control3");
-  pasiv("control4");
-  pasiv("control5");
-}
-function slid3() {
-  control("0","0","1","0","0");
-  activ("control3");
-  pasiv("control2");
-  pasiv("control1");
-  pasiv("control4");
-  pasiv("control5");
-}
-function slid4() {
-  control("0","0","0","1","0");
-  activ("control4");
-  pasiv("control2");
-  pasiv("control3");
-  pasiv("control1");
-  pasiv("control5");
-}
-function slid5() {
-  control("0","0","0","0","1");
-  activ("control5");
-  pasiv("control2");
-  pasiv("control3");
-  pasiv("control4");
-  pasiv("control1");
-}
-//Старт функции перваначальная позиция
-slid1();
-//При нажатии на правую стрелочку
-function slideRight() {
-  if (slide1.style.opacity == "1") {
-    slid2();
-  } else if (slide2.style.opacity == "1") {
-    slid3();
-  } else if (slide3.style.opacity == "1") {
-    slid4();
-  } else if (slide4.style.opacity == "1") {
-    slid5();
-  } else if (slide5.style.opacity == "1") {
-    slid1();
+
+//для мероприятий
+//проверка
+function checkActivity() {
+  if (j == activity.length) {
+    j = 0;
+  }
+  if (j == -1) {
+    j = activity.length - 1;
   }
 }
-//При нажатии левой стрелочки
-function slideLeft() {
-  if (slide1.style.opacity == "1") {
-    slid5();
-  } else if (slide2.style.opacity == "1") {
-    slid1();
-  } else if (slide3.style.opacity == "1") {
-    slid2();
-  } else if (slide4.style.opacity == "1") {
-    slid3();
-  } else if (slide5.style.opacity == "1") {
-    slid4();
-  }
+//слайдер
+var timerIdActivity = setInterval(function () {
+  checkActivity();
+  j++;
+  checkActivity();
+  document.getElementById('activity').innerHTML = activity[j];
+}, 2000);
+document.getElementById('activityLeft').onclick = function () {
+  checkActivity();
+  j--;
+  checkActivity();
+  document.getElementById('activity').innerHTML = activity[j];
 }
-//При нажатии на ссылки
-controlLeft.onclick = function () {slideLeft();}
-controlRight.onclick = function() {slideRight();}
-control1.onclick = function() {slid1();}
-control2.onclick = function() {slid2();}
-control3.onclick = function() {slid3();}
-control4.onclick = function() {slid4();}
-control5.onclick = function() {slid5();}
-//слайдер 6секунд
-function timerId() {
-  setInterval(function (){
-    slideRight();
-  }, 6000);
+document.getElementById('activityRight').onclick = function () {
+  checkActivity();
+  j++;
+  checkActivity();
+  document.getElementById('activity').innerHTML = activity[j];
 }
-//Слайдер запускаеться после загрузки всей страницы
-window.onload = function() {timerId()};
+
+//анимация чисел
