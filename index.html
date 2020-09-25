@@ -1,118 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <title>Ведущий Владимир Сапфиров - Проведение и организация праздников</title>
-  <link rel="stylesheet" href="css/normaliz.css">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Корзина</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header>
-    <div class="logo">
-      <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="30px" height="25px" viewBox="0 0 300 275" version="1.1">
-        <polygon fill="#fdff00" stroke="#605a00" stroke-width="15" points="150,25 179,111 269,111 197,165 223,251 150,200 77,251 103,165 31,111 121,111" />
-      </svg>
-      <span class="logo-span">
-        Владимир Сапфиров
-      </span>
-      <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="30px" height="25px" viewBox="0 0 300 275" version="1.1">
-        <polygon points="150,25 179,111 269,111 197,165 223,251 150,200 77,251 103,165 31,111 121,111" />
-      </svg>
-    </div>
-    <nav class="dropdown">
-      <input type="checkbox" id="menu">
-      <label for="menu"></label>
-      <ul>
-        <li class="menu-li"><a href="https://vk.com/id30192139">о себе</a></li>
-        <li class="menu-li"><a href="#activityHrev">мероприятия</a></li>
-        <li class="menu-li"><a href="#servicesHrev">услуги</a></li>
-        <li class="menu-li"><a href="#contacts">контакты</a></li>
-      </ul>
-    </nav>
-    <span class="tagline">Создадим лучший праздник вместе!</span>
+    <button class="cart-button" type="button" id="but">Нажми на меня</button>
   </header>
-  <main>
-
-    <section class="services" id="servicesHrev">
-      <a href="https://stavropol.gorko.ru/%D1%82%D0%B0%D0%BC%D0%B0%D0%B4%D0%B0/1185719/" class="services-wrap" id="services">
-        <div class="services-item"><img width="250" src="img/wedding.jpg" alt="На свежем воздухе" class="services-item-img"><span class="services-item-span">На свежем воздухе</span></div>
-      </a>
-      <div class="services-control">
-        <span class="services-left" id="servicesLeft">
-          &#60;
-        </span>
-        <span class="services-right" id="servicesRight">
-          &#62;
-        </span>
-      </div>
-    </section>
-
-    <section class="progress">
-      <div class="progress-item">
-        <img src="img/untitled.png" alt="Я провел 900 вечеринок" class="progress-img" width="190">
-        <span class="progress-namber">900</span>
-        <span class="progress-span">мероприятий</span>
-      </div>
-      <div class="progress-item">
-        <img src="img/untitled1.png" alt="На моих мероприятиях присутствовало 250000 человек" class="progress-img" width="190">
-        <span class="progress-namber">250000</span>
-        <span class="progress-span">гостей на мероприятиях</span>
-      </div>
-      <div class="progress-item">
-        <img src="img/untitled2.png" alt="мне 26 лет" class="progress-img" width="190">
-        <span class="progress-namber">26</span>
-        <span class="progress-span">лет</span>
-      </div>
-      <div class="progress-item">
-        <img src="img/untitled3.png" alt="У меня 6 лет опыта" class="progress-img" width="190">
-        <span class="progress-namber">6</span>
-        <span class="progress-span">Лет работы</span>
-      </div>
-    </section>
-
-    <section class="activity" id="activityHrev">
-      <h2 class="activity-headline">Мероприятия</h2>
-      <div class="activity-wrap" id="activity">
-        <articl class="activity-item">
-          <img src="img/freshair.jpg" alt="мероприятие на свежем ваздухе" width="300" class="activity-img">
-          <time class="activity-time" pubdate="" datetime="2019-04-01">
-            <span class="activity-day">1</span>
-            <span class="activity-month">апр</span>
-            <span class="activity-year">2019</span>
-          </time>
-          <span class="activity-h">Роупджампинг</span>
-          <p class="activity-p">Мега крутое описание. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe iusto dicta optio ipsa nobis quibusdam officiis delectus ad quos, autem dignissimos, ipsam libero at illo sint id ratione recusandae. Pariatur.</p>
-          <a href="https://m.vk.com/wall-152669026_266" class="activity-a">Read More...</a>
-        </articl>
-      </div>
-      <div class="activity-control">
-        <span class="services-left" id="activityLeft">
-          &#60;
-        </span>
-        <span class="services-right" id="activityRight">
-          &#62;
-        </span>
-      </div>
-    </section>
+  <main id="main">
+    <div class="goods-list"></div>
   </main>
-  <footer id="contacts">
-    <h2 class="headline">Звоните и бронируйте прямо сейчас!</h2>
-    <span class="footer-contacts">e-mail: твой@mail.ru</span>
-    <span class="footer-contacts">тел: +7-909-761-49-38</span>
-    <a href="https://vk.com/v_sapfirov" class="footer-vk"><span class="footer-contacts">Моя группа ВКонтакте</span></a>
-    <div class="social-network">
-      <a href="https://vk.com/id30192139" class="footer-a">
-        <img src="img/vk.png" alt="vk" class="footer-img">
-      </a>
-      <a href="https://www.instagram.com/vl.sapfirov" class="footer-a">
-        <img src="img/instagram.png" alt="instagram" class="footer-img">
-      </a>
-    </div>
-  </footer>
-  <script src="js/slider.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
